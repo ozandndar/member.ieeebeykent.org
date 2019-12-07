@@ -1,0 +1,28 @@
+@media only screen and (min-width: 768px) {
+  .show-on-desktop {
+    display : none !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .show-on-mobile {
+    display : none !important;
+  }
+
+  .member-info {
+    max-height: unset;
+    overflow-y: unset;
+    height: unset;
+    text-align: center;
+    padding : 15px 0;
+  }
+
+  .member-img::after {
+    display : none
+  }
+
+
+
+
+
+}
