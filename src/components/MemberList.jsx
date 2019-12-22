@@ -1,19 +1,22 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { Link } from 'gatsby'
 import './style.css';
 
 const MemberList = (props) => {
-  console.log(props);
   return (
     <div className="member-item">
       <div className="row">
         <div className="col-md-3">
-          <div className="member-img" style={{ background: `url(${props.resim})` }} />
+          <Link to={`${props.id + 10000}`}>
+            <div className="member-img" style={{ background: `url(${props.resim})` }} />
+          </Link>
         </div>
         <div className="col-md-4">
           <div className="member-info">
-            <h2>{props.name_surname}</h2>
+            <Link to={`${props.id + 10000}`}>
+              <h2>{props.name_surname}</h2>
+            </Link>
             <span className="member-department">
               <strong>{props.okudugu_bolum}</strong>
             </span>
@@ -31,21 +34,21 @@ const MemberList = (props) => {
               {props.linkedin && (
                 <div className="single-social-icon">
                   <a href={props.linkedin} target="_blank">
-                    <i class="fab fa-linkedin" />
+                    <i className="fab fa-linkedin" />
                   </a>
                 </div>
               )}
               {props.github && (
                 <div className="single-social-icon">
                   <a href={props.github} target="_blank">
-                    <i class="fab fa-github" />
+                    <i className="fab fa-github" />
                   </a>
                 </div>
               )}
               {props.instagram && (
                 <div className="single-social-icon">
                   <a href={props.instagram} target="_blank">
-                    <i class="fab fa-instagram" />
+                    <i className="fab fa-instagram" />
                   </a>
                 </div>
               )}

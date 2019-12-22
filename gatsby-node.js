@@ -179,6 +179,10 @@ exports.createPages = ({ graphql, actions }) => {
     const EA = result.data.EA.nodes;
     const WIE = result.data.WIE.nodes;
 
+    members.map((m,i) => (
+      members[i].wordpress_id += m.wordpress_id + 10000
+    ))
+
     createPage({
       path: '/',
       component: IndexTemplate,
