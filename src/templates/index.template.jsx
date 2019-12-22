@@ -22,6 +22,7 @@ const IndexPage = ({ pageContext: { members } }) => {
                 linkedin={m.acf.linkedin}
                 github={m.acf.github}
                 instagram={m.acf.instagram}
+                id={m.wordpress_id}
               />
               <hr />
             </div>
