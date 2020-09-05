@@ -10,6 +10,8 @@ import {
   MDBNavbarNav
 } from 'mdbreact';
 import { BrowserRouter } from 'react-router-dom';
+// import { Router, Link } from '@reach/router';
+import { Link } from 'gatsby';
 
 export class Header extends React.Component {
   state = {
@@ -21,22 +23,24 @@ export class Header extends React.Component {
   };
   render() {
     return (
-      <BrowserRouter>
+      <div>
         <MDBNavbar color="transparent" dark expand="md">
           <MDBNavbarBrand>
-            <img src={require('../assets/images/ieeelogo.svg')} alt="" className="ieee-logo"/>
+            <Link to="/">
+              <img src={require('../assets/images/ieeelogo.svg')} alt="" className="ieee-logo" />
+            </Link>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <MDBNavLink to="#!">Kurumsal</MDBNavLink>
+                <Link to="#!">Kurumsal</Link>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="#!">Blog</MDBNavLink>
+                <Link to="#!">Blog</Link>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="#!">Member Backoffice</MDBNavLink>
+                <Link to="#!">Member Backoffice</Link>
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
@@ -44,24 +48,32 @@ export class Header extends React.Component {
 
         <MDBNav className="justify-content-center committees" style={{ alignItems: 'center' }}>
           <MDBNavItem>
-            <MDBNavLink active to="#!">
+            <Link to="/cs">
               <img src={require('../assets/images/cs.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
-            </MDBNavLink>
+            </Link>
           </MDBNavItem>
           <MDBNavItem>
-            <img src={require('../assets/images/ras.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            <Link to="/ras">
+              <img src={require('../assets/images/ras.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            </Link>
           </MDBNavItem>
           <MDBNavItem>
-            <img src={require('../assets/images/ea.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            <Link to="/ea">
+              <img src={require('../assets/images/ea.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            </Link>
           </MDBNavItem>
           <MDBNavItem>
-            <img src={require('../assets/images/pes.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            <Link to="/pes">
+              <img src={require('../assets/images/pes.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            </Link>
           </MDBNavItem>
           <MDBNavItem>
-            <img src={require('../assets/images/wie.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            <Link to="/wie">
+              <img src={require('../assets/images/wie.png')} alt="" style={{ maxWidth: '100%', width: 150 }} />
+            </Link>
           </MDBNavItem>
         </MDBNav>
-      </BrowserRouter>
+      </div>
     );
   }
 }

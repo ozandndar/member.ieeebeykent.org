@@ -25,6 +25,7 @@
     "lodash": "^4.17.15",
     "mdbreact": "^4.19.0",
     "prop-types": "^15.7.2",
+    "reach-router": "^0.0.0",
     "react": "^16.8.6",
     "react-accessible-accordion": "^3.0.0",
     "react-awesome-slider": "^1.0.1",
@@ -32,8 +33,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-iframe": "^1.8.0",
-    "react-multi-carousel": "^2.1.2",
-    "react-router-dom": "^5.0.1"
+    "react-multi-carousel": "^2.1.2"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

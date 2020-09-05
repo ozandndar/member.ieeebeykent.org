@@ -193,6 +193,7 @@ a.nav-link.Ripple-parent.active:focus {
 
 .single-member-name {
   color : #faa41a !important;
+  margin-top : 20px;
 }
 
 .member-mail {
