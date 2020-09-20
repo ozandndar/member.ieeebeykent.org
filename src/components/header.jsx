@@ -34,13 +34,13 @@ export class Header extends React.Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link to="#!">Kurumsal</Link>
+                <Link to="http://ieeebeykent.org/" target="_blank">Kurumsal</Link>
               </MDBNavItem>
               <MDBNavItem>
-                <Link to="#!">Blog</Link>
+                <Link to="http://ieeebeykent.org/blog/">Blog</Link>
               </MDBNavItem>
               <MDBNavItem>
-                <Link to="#!">Member Backoffice</Link>
+                <Link to="http://panel.ieeebeykent.org/">Member Backoffice</Link>
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
