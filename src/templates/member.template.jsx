@@ -1,10 +1,20 @@
 import React from 'react';
 import _ from 'lodash';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import QRCode from 'qrcode.react';
 
 const MemberPage = ({ pageContext: { member } }) => {
-  console.log(member);
+
+  // const [img, setImg] = useState(null);
+
+  function downloadQr() {
+    console.log("start downloading");
+    var link = document.createElement('a');
+    link.download = 'filename.png';
+    link.href = document.querySelector('.qr-code canvas').toDataURL()
+    link.click();
+  }
+
   return (
     <Layout>
       <div id="single-member" className="container">
@@ -53,7 +63,10 @@ const MemberPage = ({ pageContext: { member } }) => {
                   </div>
                 )}
               </div>
-
+              <div className="qr-code">
+                <QRCode value={"member.ieeebeykent.org/" + (member.wordpress_id + 10000)} size={200} />
+              </div>
+              <a className="download-qr" onClick={downloadQr}>Downlaod QR</a>
             </div>
           </div>
 

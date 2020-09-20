@@ -25,6 +25,7 @@
     "lodash": "^4.17.15",
     "mdbreact": "^4.19.0",
     "prop-types": "^15.7.2",
+    "qrcode.react": "^1.0.0",
     "reach-router": "^0.0.0",
     "react": "^16.8.6",
     "react-accessible-accordion": "^3.0.0",

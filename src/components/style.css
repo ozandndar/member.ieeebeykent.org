@@ -210,3 +210,22 @@ div#navbarCollapse3 a {
     color: white;
     margin-right: 10px;
 }
+
+.qr-code canvas {
+    margin: 20px auto;
+}
+
+.download-qr {
+    border: 1px solid white;
+    padding: 5px 15px;
+    margin: 30px auto;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: .2s ease all;
+}
+
+.download-qr:hover {
+    background: white !important;
+    color: #171c27 !important;
+    border-color: white !important;
+}
