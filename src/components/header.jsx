@@ -2,14 +2,14 @@ import React from 'react';
 import {
   MDBNav,
   MDBNavItem,
-  MDBNavLink,
+  // MDBNavLink,
   MDBNavbarBrand,
   MDBNavbar,
   MDBNavbarToggler,
   MDBCollapse,
   MDBNavbarNav
 } from 'mdbreact';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 // import { Router, Link } from '@reach/router';
 import { Link } from 'gatsby';
 
@@ -34,13 +34,13 @@ export class Header extends React.Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link to="http://ieeebeykent.org/" target="_blank">Kurumsal</Link>
+                <a href="http://ieeebeykent.org/" target="_blank" rel="noreferrer">Kurumsal</a>
               </MDBNavItem>
               <MDBNavItem>
-                <Link to="http://ieeebeykent.org/blog/">Blog</Link>
+                <a href="http://ieeebeykent.org/blog/" target="_blank" rel="noreferrer">Blog</a>
               </MDBNavItem>
               <MDBNavItem>
-                <Link to="http://panel.ieeebeykent.org/">Member Backoffice</Link>
+                <a href="http://panel.ieeebeykent.org/" target="_blank" rel="noreferrer">Member Backoffice</a>
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
@@ -73,6 +73,18 @@ export class Header extends React.Component {
             </Link>
           </MDBNavItem>
         </MDBNav>
+
+        <div className="mobile-menu">
+          <h2>Komiteler</h2>
+          <div className="komite-list">
+            <Link to="/">Tumu</Link>
+            <Link to="/cs">Computer Society</Link>
+            <Link to="/ras">Robotics And Automation Society</Link>
+            <Link to="/pes">Power And Energy Society</Link>
+            <Link to="/ea">Educational Activities</Link>
+            <Link to="/wie">Women In Engineering</Link>
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'gatsby'
 import './style.css';
 
@@ -33,21 +33,21 @@ const MemberList = (props) => {
             <div className="social-icons">
               {props.linkedin && (
                 <div className="single-social-icon">
-                  <a href={props.linkedin} target="_blank">
+                  <a href={props.linkedin} target="_blank" rel="noreferrer">
                     <i className="fab fa-linkedin" />
                   </a>
                 </div>
               )}
               {props.github && (
                 <div className="single-social-icon">
-                  <a href={props.github} target="_blank">
+                  <a href={props.github} target="_blank" rel="noreferrer">
                     <i className="fab fa-github" />
                   </a>
                 </div>
               )}
               {props.instagram && (
                 <div className="single-social-icon">
-                  <a href={props.instagram} target="_blank">
+                  <a href={props.instagram} target="_blank" rel="noreferrer">
                     <i className="fab fa-instagram" />
                   </a>
                 </div>
@@ -56,7 +56,9 @@ const MemberList = (props) => {
           </div>
         </div>
         <div className="col-md-5 show-on-mobile">
-          <span className="member-content" dangerouslySetInnerHTML={{ __html: props.content }} />
+          <span className="member-content">
+            {props.content}
+          </span>
         </div>
       </div>
 
