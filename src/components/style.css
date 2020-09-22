@@ -62,11 +62,6 @@ hr {
     position: relative;
 }
 
-.member-item .row {
-    position: relative;
-    max-width: 100%;
-}
-
 .member-img::after {
     content: '';
     width: 0;
@@ -262,5 +257,9 @@ div#navbarCollapse3 a {
 @media (min-width: 768px) {
     .mobile-menu {
         display: none;
+    }
+    .member-item .row {
+        position: relative;
+        max-width: 100%;
     }
 }
